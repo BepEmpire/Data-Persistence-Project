@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 public class MenuUIHandler : MonoBehaviour
 {
     //This is the handler of the main menu scene
 
-    [SerializeField] Text PlayerNameInput;
+    [SerializeField] TextMeshProUGUI PlayerNameText;
 
     public void StartGame()
     {
@@ -17,7 +18,7 @@ public class MenuUIHandler : MonoBehaviour
 
     public void SetPlayerName()
     {
-        PlayerDataHandle.Instance.PlayerName = PlayerNameInput.text;
+        PlayerDataHandle.Instance.PlayerName = PlayerNameText.text;
     }
 
     public void ExitGame()
